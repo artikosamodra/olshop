@@ -2,7 +2,9 @@ import { House } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Logo = () => {
+  
   return (
     <>
       <div className="flex justify-center items-center">
