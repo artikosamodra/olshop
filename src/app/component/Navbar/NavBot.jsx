@@ -1,5 +1,14 @@
-import { Bell, House, Play, User } from "@phosphor-icons/react/dist/ssr";
+import {
+  Bell,
+  ChatCircleDots,
+  ChatDots,
+  House,
+  Play,
+  User,
+} from "@phosphor-icons/react/dist/ssr";
 import Logo from "./Logo";
+import Link from "next/link";
+import BtnNavbot from "./BtnNavbot";
 
 const NavBot = () => {
   return (
@@ -8,15 +17,9 @@ const NavBot = () => {
         <button className="py-3 hover:bg-stone-200 flex justify-center text-orange-100 hover:text-stone-700">
           <Logo />
         </button>
-        <button className="py-3 hover:bg-stone-200 flex justify-center text-orange-100 hover:text-stone-700">
-          <Play size={24} weight="fill" />
-        </button>
-        <button className="py-3 hover:bg-stone-200 flex justify-center text-orange-100 hover:text-stone-700">
-          <Bell size={24} weight="fill" />
-        </button>
-        <button className="py-3 hover:bg-stone-200 flex justify-center text-orange-100 hover:text-stone-700">
-          <User size={24} weight="fill" />
-        </button>
+        <BtnNavbot linkNavbot="/" IconName="ChatCircleDots" />
+        <BtnNavbot linkNavbot="/" IconName="Bell" />
+        <BtnNavbot linkNavbot="/" IconName="User" />
       </div>
     </>
   );

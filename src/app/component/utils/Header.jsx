@@ -1,7 +1,7 @@
 const Header = ({ nameHeader }) => {
   return (
     <>
-      <div>{nameHeader}</div>
+      <div className="text-xl font-semibold py-2">{nameHeader}</div>
     </>
   );
 };

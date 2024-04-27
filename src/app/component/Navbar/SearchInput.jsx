@@ -19,10 +19,10 @@ const SearchInput = () => {
   };
   return (
     <>
-      <div className="relative">
+      <div className="relative flex justify-center items-center">
         <input
           placeholder="Cari Produk..."
-          className="w-full py-1 px-4 rounded-sm"
+          className="py-1 px-4 rounded-sm w-full"
           ref={searchRef}
           onKeyDown={handleSearch}
         />

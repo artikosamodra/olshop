@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <main>
       <div className="pt-20">
-        <div className="px-40">
-        <Header nameHeader="Rekomendasi Produk" />
+        <div className="lg:px-20 md:px-5">
+          <Header nameHeader="Rekomendasi Produk" />
           <Recommended />
         </div>
       </div>
