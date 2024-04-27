@@ -1,4 +1,4 @@
-import ButtonA from "./ButtonA";
+import Chart from "./Chart";
 import Logo from "./Logo";
 import NavBot from "./NavBot";
 import SearchInput from "./SearchInput";
@@ -6,15 +6,16 @@ import SearchInput from "./SearchInput";
 const Navbar = () => {
   return (
     <>
-      <div className="grid grid-cols-10 py-3 md:px-10 px-3 bg-orange-600 fixed w-full top-0">
+      <div className="grid grid-cols-10 py-3 md:px-40 px-3 bg-orange-600 fixed w-full top-0">
         <div className="md:col-span-2 md:block hidden">
           <Logo />
         </div>
-        <div className="md:col-span-6 col-span-8">
+        <div className="md:col-span-6 col-span-8 flex justify-center items-center">
           <SearchInput />
         </div>
         <div className="col-span-2">
-          <ButtonA />
+          <Chart />
+  
         </div>
       </div>
 

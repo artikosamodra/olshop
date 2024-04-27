@@ -19,7 +19,7 @@ const SearchInput = () => {
   };
   return (
     <>
-      <div className="flex relative">
+      <div className="relative">
         <input
           placeholder="Cari Produk..."
           className="w-full py-1 px-4 rounded-sm"
