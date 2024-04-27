@@ -4,7 +4,7 @@ const Chart = () => {
   return (
     <>
       <div className="flex justify-center">
-        <button className="py-1 px-2 text-white rounded-sm hover:text-stone-700">
+        <button className="py-1 px-2 text-white rounded-sm hover:text-blue-700">
           <ShoppingCart size={32} weight="fill" />
         </button>
       </div>

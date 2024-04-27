@@ -1,3 +1,4 @@
+import BtnAcc from "./BtnAcc";
 import Chart from "./Chart";
 import Logo from "./Logo";
 import NavBot from "./NavBot";
@@ -7,14 +8,17 @@ const Navbar = () => {
   return (
     <>
       <div className="grid grid-cols-10 py-3 lg:px-20 px-5 bg-orange-600 fixed w-full top-0 flex items-center">
-        <div className="md:col-span-2 md:block hidden">
+        <div className="lg:col-span-2 lg:block hidden">
           <Logo />
         </div>
-        <div className="md:col-span-6 col-span-8">
+        <div className="lg:col-span-6 col-span-8">
           <SearchInput />
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 flex justify-center items-center gap-5">
           <Chart />
+          <div className="lg:flex hidden">
+            <BtnAcc />
+          </div>
         </div>
       </div>
 

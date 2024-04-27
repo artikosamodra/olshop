@@ -12,9 +12,9 @@ const Logo = () => {
             alt="logo"
             width={150}
             height={150}
-            className="md:flex hidden"
+            className="lg:flex hidden"
           />
-          <div className="md:hidden flex">
+          <div className="lg:hidden flex">
             <House size={24} weight="fill" />
           </div>
         </Link>
