@@ -13,6 +13,10 @@ body {
   height: 100vh;
 }
 
+td{
+  padding: 10px;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;

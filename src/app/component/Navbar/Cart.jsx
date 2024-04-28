@@ -1,6 +1,6 @@
 import { ShoppingCart } from "@phosphor-icons/react/dist/ssr";
 
-const Chart = () => {
+const Cart = () => {
   return (
     <>
       <div className="flex justify-center">
@@ -12,4 +12,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default Cart;

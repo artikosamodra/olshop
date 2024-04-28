@@ -1,5 +1,5 @@
 import BtnAcc from "./BtnAcc";
-import Chart from "./Chart";
+import Cart from "./Cart";
 import Logo from "./Logo";
 import NavBot from "./NavBot";
 import SearchInput from "./SearchInput";
@@ -15,7 +15,7 @@ const Navbar = () => {
           <SearchInput />
         </div>
         <div className="col-span-2 flex justify-center items-center gap-5">
-          <Chart />
+          <Cart />
           <div className="lg:flex hidden">
             <BtnAcc />
           </div>
