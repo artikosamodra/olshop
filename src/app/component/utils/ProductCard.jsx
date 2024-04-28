@@ -4,7 +4,7 @@ import Link from "next/link";
 const ProductCard = () => {
   return (
     <>
-      <Link href="./app/pages/detail/[id]">
+      {/* <Link href="./app/pages/detail/[id]"> */}
         <div className="flex flex-col bg-stone-50 rounded-md shadow-md">
           <div>
             <Image
@@ -27,7 +27,7 @@ const ProductCard = () => {
             </div>
           </div>
         </div>
-      </Link>
+      {/* </Link> */}
     </>
   );
 };
