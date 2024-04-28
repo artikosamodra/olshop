@@ -5,7 +5,7 @@ const BtnAcc = () => {
     <>
       <div className="flex gap-5">
         <LinkComp targetLink="/" targetName="Masuk" IconName="User" />
-        <div className="lg:flex hidden">|</div>
+        <div className="lg:flex hidden text-white">|</div>
         <LinkComp targetLink="/" targetName="Daftar" />
       </div>
     </>
