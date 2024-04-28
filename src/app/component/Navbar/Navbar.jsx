@@ -7,7 +7,7 @@ import SearchInput from "./SearchInput";
 const Navbar = () => {
   return (
     <>
-      <div className="grid grid-cols-10 py-3 lg:px-20 px-5 bg-orange-600 fixed w-full top-0 flex items-center">
+      <div className="grid grid-cols-10 py-3 lg:px-20 px-5 bg-orange-600 fixed w-full top-0 flex items-center z-10">
         <div className="lg:col-span-2 lg:block hidden">
           <Logo />
         </div>
