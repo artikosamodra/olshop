@@ -8,7 +8,7 @@ const Banner = () => {
         alt="Banner"
         width={100}
         height={100}
-        className="w-full lg:h-80 md:h-60 h-40 border"
+        className="w-full lg:h-80 md:h-60 h-40 border shadow-xl"
       />
     </>
   );

@@ -3,7 +3,7 @@ import Image from "next/image";
 const ProductCard = () => {
   return (
     <>
-      <div className="flex flex-col bg-stone-50 rounded-md">
+      <div className="flex flex-col bg-stone-50 rounded-md shadow-md">
         <div>
           <Image
             src="/img/logo"
