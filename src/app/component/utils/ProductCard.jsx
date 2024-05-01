@@ -7,7 +7,9 @@ const ProductCard = () => {
   const [products, setProducts] = useState([]);
 
   const ProductsFetch = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}products`
+    );
     const respJson = await response.json();
     console.log(respJson);
     setProducts(respJson);
@@ -25,19 +27,19 @@ const ProductCard = () => {
             key={product.id}
             className="flex flex-col bg-stone-50 rounded-md shadow-md"
           >
-            <div>
+            <div className="p-2">
               <Image
                 src={product.image}
                 alt="product"
                 width={300}
                 height={300}
-                className="border"
+                className="img-product"
               />
             </div>
             <div className="px-2 py-4">
-              <div>{product.title}</div>
+              <div className="truncate font-bold pb-2">{product.title}</div>
               <div className="flex justify-between">
-                <div>{product.price}</div>
+                <div>$ {product.price}</div>
                 <div>Diskon</div>
               </div>
               <div className="flex justify-between">

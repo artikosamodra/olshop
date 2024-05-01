@@ -13,7 +13,7 @@ body {
   height: 100vh;
 }
 
-td{
+td {
   padding: 2px 10px;
 }
 
@@ -49,3 +49,24 @@ td{
     transform: rotate(1turn);
   }
 }
+
+.img-product {
+  width: 100%;
+  max-height: 500px;
+  padding: 10px;
+  /* object-fit: cover; */
+  aspect-ratio: 13 / 16;
+  border-radius: 30px;
+  transition: 0.3s ease all;
+  -webkit-transition: 0.3s ease all;
+  -moz--transition: 0.3s ease all;
+  -ms-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+}
+
+/* .truncate {
+  width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
