@@ -1,5 +1,3 @@
-import { categories } from "./Data";
-
 export const paginate = (page, setPage, newDirection, imagesLength) => {
   let newPage = page + newDirection;
 
