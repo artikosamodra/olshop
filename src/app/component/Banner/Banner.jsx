@@ -19,7 +19,7 @@ const Banner = () => {
         <div className="absolute left-0 text-white">
           <button
             onClick={() => handlePaginate(-1)}
-            className="px-1 py-2 bg-stone-300 rounded-md"
+            className="px-1 py-2 bg-stone-300 rounded-md opacity-[0.7]"
           >
             <CaretLeft size={32} weight="fill" />
           </button>
@@ -28,15 +28,15 @@ const Banner = () => {
           <Image
             src={images[page]}
             alt="Banner"
-            width={100}
-            height={100}
-            className="w-full lg:h-80 md:h-60 h-40 border shadow-xl bg-cover object-cover"
+            width={2400}
+            height={600}
+            className="w-full lg:h-80 md:h-60 h-32 border shadow-xl bg-cover object-cover"
           />
         </div>
         <div className="absolute right-0 text-white">
           <button
             onClick={() => handlePaginate(1)}
-            className="px-1 py-2 bg-stone-300 rounded-md"
+            className="px-1 py-2 bg-stone-300 rounded-md opacity-[0.7]"
           >
             <CaretRight size={32} weight="fill" />
           </button>

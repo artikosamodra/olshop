@@ -21,7 +21,7 @@ const ProductCard = () => {
 
   return (
     <>
-      {products.map((product) => (
+      {products?.map((product) => (
         <Link href="/">
           <div
             key={product.id}
