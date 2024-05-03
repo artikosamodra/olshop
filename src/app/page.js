@@ -13,7 +13,7 @@ const Home = () => {
           <Banner />
         </div>
         <div className="lg:px-20 md:px-5 pb-10">
-          <Header nameHeader="Kategory Produk" />
+          <Header nameHeader="Kategori Produk" />
           <Categorty />
         </div>
         <div className="lg:px-20 md:px-5 pb-10">
