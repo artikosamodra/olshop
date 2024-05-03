@@ -4,6 +4,7 @@ import { useState } from "react";
 import { images } from "../../libs/Data";
 import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
 import { paginate } from "@/app/libs/Logic";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   const [page, setPage] = useState(0);
@@ -11,6 +12,7 @@ const Banner = () => {
 
   const handlePaginate = (newDirection) => {
     paginate(page, setPage, newDirection, imagesLength);
+
   };
 
   return (
@@ -24,15 +26,15 @@ const Banner = () => {
             <CaretLeft size={32} weight="fill" />
           </button>
         </div>
-        <div className="col-span-8">
+        <motion.div className="col-span-8">
           <Image
             src={images[page]}
             alt="Banner"
             width={2400}
             height={600}
-            className="w-full lg:h-80 md:h-60 h-32 border shadow-xl bg-cover object-cover"
+            className="w-full lg:h-80 md:h-60 h-32 border shadow-xl bg-cover object-cover rounded-md"
           />
-        </div>
+        </motion.div>
         <div className="absolute right-0 text-white">
           <button
             onClick={() => handlePaginate(1)}

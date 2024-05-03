@@ -15,36 +15,8 @@ const Categorty = () => {
 
   return (
     <>
-      <div className="relative grid lg:grid-cols-8 md:grid-cols-6 grid-cols-3 flex gap-1">
-        <div className="absolute left-0 text-white">
-          <button
-            onClick={() => handlePaginateCat(-1)}
-            className="px-1 py-2 bg-stone-300 rounded-md"
-          >
-            <CaretLeft size={32} weight="fill" />
-          </button>
-        </div>
-
-        <div className="absolute right-0 text-white">
-          <button
-            onClick={() => handlePaginateCat(1)}
-            className="px-1 py-2 bg-stone-300 rounded-md"
-          >
-            <CaretRight size={32} weight="fill" />
-          </button>
-        </div>
-        {/* <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard />
-          <CatergoryCard /> */}
+      <div className="relative grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 flex gap-2 px-2">
+        <CatergoryCard />
       </div>
     </>
   );

@@ -11,10 +11,10 @@ const Navbar = () => {
         <div className="lg:col-span-2 lg:block hidden">
           <Logo />
         </div>
-        <div className="lg:col-span-6 col-span-8">
+        <div className="lg:col-span-5 col-span-7">
           <SearchInput />
         </div>
-        <div className="col-span-2 flex justify-center items-center gap-5">
+        <div className="col-span-3 flex justify-center items-center gap-5">
           <Cart />
           <div className="lg:flex hidden">
             <BtnAcc />

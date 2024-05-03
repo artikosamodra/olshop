@@ -8,7 +8,7 @@ const ProductCard = () => {
 
   const ProductsFetch = async () => {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}products`
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/products?limit=12`
     );
     const respJson = await response.json();
     console.log(respJson);
@@ -40,7 +40,7 @@ const ProductCard = () => {
               <div className="truncate font-bold pb-2">{product.title}</div>
               <div className="flex justify-between">
                 <div>$ {product.price}</div>
-                <div>Diskon</div>
+                <div>{product.category}</div>
               </div>
               <div className="flex justify-between">
                 <div>Rating</div>
