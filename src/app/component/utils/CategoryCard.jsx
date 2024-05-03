@@ -31,7 +31,7 @@ const CatergoryCard = () => {
         <motion.div
           whileHover={{ scale: 0.9 }}
           transition={{ duration: 0.5 }}
-          className="flex justify-center items-center bg-stone-100 rounded-md p-4 shadow-md hover:bg-rose-200"
+          className="flex justify-center items-center bg-stone-100 rounded-md p-4 shadow-md hover:bg-rose-200 "
           key={category.id}
         >
           <div className="p-2 text-center">{category}</div>

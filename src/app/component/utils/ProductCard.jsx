@@ -25,7 +25,7 @@ const ProductCard = () => {
       {products?.map((product) => (
         <Link href="/">
           <motion.div
-            whileHover={{ scale: 0.95 }}
+            whileHover={{ scale: 0.95, zIndex: 0 }}
             transition={{ duration: 0.3 }}
             key={product.id}
             className="flex flex-col bg-stone-50 rounded-md shadow-md"
