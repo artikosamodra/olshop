@@ -1,14 +1,29 @@
 import InfoCard from "@/app/component/utils/InfoCard";
 import Image from "next/image";
+import { useState } from "react";
 
 const Detail = () => {
+  const [detail, setDetail] = useState([]);
+
+  const ProductsFetch = async () => {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/1`
+    );
+    const respJson = await response.json();
+    setDetail(respJson);
+  };
+
+  useEffect(() => {
+    ProductsFetch();
+  }, []);
+
   return (
     <>
       <section className="pt-40 px-20">
         <div className="grid grid-cols-10">
           <div className="col-span-3">
             <Image
-              src="/gambar"
+              src={}
               alt="Product Picture"
               width={300}
               height={300}

@@ -1,6 +1,7 @@
 import Loading from "@/app/loading";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CatergoryCard = () => {
   const [categories, setCategories] = useState([]);
@@ -28,14 +29,16 @@ const CatergoryCard = () => {
   return (
     <>
       {categories?.map((category) => (
-        <motion.div
-          whileHover={{ scale: 0.9 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center items-center bg-stone-100 rounded-md p-4 shadow-md hover:bg-rose-200 "
-          key={category.id}
-        >
-          <div className="p-2 text-center">{category}</div>
-        </motion.div>
+        <Link href="/">
+          <motion.div
+            whileHover={{ scale: 0.9 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center items-center bg-stone-100 rounded-md shadow-md hover:bg-rose-200 p-2"
+            key={category.id}
+          >
+            <div className="text-center">{category}</div>
+          </motion.div>
+        </Link>
       ))}
     </>
   );
