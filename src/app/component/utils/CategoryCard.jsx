@@ -1,3 +1,4 @@
+"use client";
 import Loading from "@/app/loading";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";

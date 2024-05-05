@@ -3,11 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard = ({ api }) => {
-
   return (
     <>
       {api?.map((product) => (
-        <Link href="/" key={product.id}>
+        <Link href={`/products/${product.id}`} key={product.id}>
           <motion.div
             whileHover={{ scale: 0.95, zIndex: 0 }}
             transition={{ duration: 0.3 }}

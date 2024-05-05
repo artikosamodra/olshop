@@ -5,9 +5,9 @@ import { useState } from "react";
 const Detail = () => {
   const [detail, setDetail] = useState([]);
 
-  const ProductsFetch = async () => {
+  const ProductsFetch = async ({ params: { product.id } }) => {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/1`
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/${id}`
     );
     const respJson = await response.json();
     setDetail(respJson);
@@ -15,7 +15,7 @@ const Detail = () => {
 
   useEffect(() => {
     ProductsFetch();
-  }, []);
+  }, [product.id]);
 
   return (
     <>
@@ -23,13 +23,14 @@ const Detail = () => {
         <div className="grid grid-cols-10">
           <div className="col-span-3">
             <Image
-              src={}
+              src="/"
               alt="Product Picture"
               width={300}
               height={300}
               className="border"
             />
           </div>
+          <h1>`${detail.product.title}`</h1>
           <div className="col-span-7">
             <InfoCard />
           </div>
