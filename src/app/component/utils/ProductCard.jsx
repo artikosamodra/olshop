@@ -5,12 +5,12 @@ import Link from "next/link";
 const ProductCard = ({ api }) => {
   return (
     <>
-      {api?.map((product) => (
-        <Link href={`/products/${product.id}`} key={product.id}>
+      {api?.map((product, index) => (
+        <Link href={`/pages/detail/${product.id}`}>
           <motion.div
             whileHover={{ scale: 0.95, zIndex: 0 }}
             transition={{ duration: 0.3 }}
-            key={product.id}
+            key={index}
             className="flex flex-col bg-stone-50 rounded-md shadow-md"
           >
             <div className="p-2">

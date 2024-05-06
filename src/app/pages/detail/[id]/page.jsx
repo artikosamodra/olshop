@@ -1,50 +1,62 @@
+"use client";
 import InfoCard from "@/app/component/utils/InfoCard";
+import Loading from "@/app/loading";
 import Image from "next/image";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Detail = () => {
-  const [detail, setDetail] = useState([]);
+  // const router = useRouter();
+  // const { id } = router.query;
+  const [product, setProduct] = useState(null);
 
-  const ProductsFetch = async ({ params: { product.id } }) => {
+  // const ProductsFetch = async ({ params: { id } }) => {
+  //   const response = await fetch(
+  //     `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/${id}`
+  //   );
+  //   const respJson = await response.json();
+  //   setDetail(respJson);
+  // };
+
+  const ProductsFetch = async ({ params: { id } }) => {
+    // if (!id) return;
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/${id}`
     );
     const respJson = await response.json();
-    setDetail(respJson);
+    // console.log(respJson);
+    setProduct(respJson);
   };
-
   useEffect(() => {
     ProductsFetch();
-  }, [product.id]);
+  }, []);
+
+  if (!product) {
+    return <Loading />;
+  }
 
   return (
     <>
+      <div className="pt-40">MUNCUL</div>
       <section className="pt-40 px-20">
         <div className="grid grid-cols-10">
           <div className="col-span-3">
             <Image
-              src="/"
+              src={product.image}
               alt="Product Picture"
               width={300}
               height={300}
               className="border"
             />
           </div>
-          <h1>`${detail.product.title}`</h1>
+          <h1>`${product.title}`</h1>
           <div className="col-span-7">
             <InfoCard />
           </div>
         </div>
         <div className="py-10">
           <h1>Deskripsi Barang</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At
-            repellat, vero tempore nobis dolorem libero mollitia optio. Eius
-            quam laudantium nesciunt porro ipsa. Tempore quasi tenetur qui
-            asperiores vel necessitatibus tempora rerum, eligendi excepturi
-            quisquam, autem, ex labore odit. Tenetur facilis ad ratione, nam
-            temporibus soluta velit nesciunt itaque non.
-          </p>
+          <p>{product.description}</p>
         </div>
       </section>
     </>

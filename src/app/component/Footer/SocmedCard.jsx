@@ -7,7 +7,7 @@ const SocmedCard = ({ linkS, nameS, iconName, iconClass, iconSize }) => {
   return (
     <>
       <Link href={linkS}>
-        <div className="flex flex-col justify-center items-center border p-2 rounded-lg bg-gray-800 hover:bg-red-900">
+        <div className="flex flex-col justify-center items-center py-2 border-2 rounded-lg shadow-md hover:bg-red-700">
           {IconComponent && (
             <IconComponent className={iconClass} size={iconSize} />
           )}
