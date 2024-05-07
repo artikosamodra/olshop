@@ -12,7 +12,6 @@ const Banner = () => {
 
   const handlePaginate = (newDirection) => {
     paginate(page, setPage, newDirection, imagesLength);
-
   };
 
   return (
@@ -30,8 +29,9 @@ const Banner = () => {
           <Image
             src={images[page]}
             alt="Banner"
-            width={2400}
-            height={600}
+            width={1200}
+            height={300}
+            priority={true}
             className="w-full lg:h-80 md:h-60 h-32 border shadow-xl bg-cover object-cover rounded-md"
           />
         </motion.div>
