@@ -6,11 +6,10 @@ const ProductCard = ({ api }) => {
   return (
     <>
       {api?.map((product, index) => (
-        <Link href={`/pages/detail/${product.id}`}>
+        <Link href={`/pages/detail/${product.id}`} key={index}>
           <motion.div
             whileHover={{ scale: 0.95, zIndex: 0 }}
             transition={{ duration: 0.3 }}
-            key={index}
             className="flex flex-col bg-stone-50 rounded-md shadow-md"
           >
             <div className="p-2">

@@ -3,8 +3,6 @@ import Categorty from "./component/Category/Category";
 import Recommended from "./component/Recomended/Recommended";
 import Header from "./component/utils/Header";
 
-// import fetchAllProducts from "./libs/useFetch";
-
 const Home = () => {
   return (
     <main>

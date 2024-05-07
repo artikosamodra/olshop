@@ -1,11 +1,11 @@
 "use client";
 import { Star } from "@phosphor-icons/react";
 
-const InfoCard = () => {
+const InfoCard = ({ nameP, catP, priceP }) => {
   return (
     <>
       <div className="bg-stone-100 px-10 py-4">
-        <div className="px-2 text-2xl font-bold pb-2">Nama Produk</div>
+        <div className="px-2 text-2xl font-bold pb-2">{nameP}</div>
         <div className="flex gap-10 px-2">
           <div className="text-yellow-400 flex">
             <Star size={20} weight="fill" />
@@ -20,23 +20,21 @@ const InfoCard = () => {
           <table>
             <tr>
               <td>Kategori</td>
-              <td>: XXXXX</td>
+              <td>: {catP}</td>
             </tr>
             <tr>
               <td>Brand</td>
-              <td>: XXXXX</td>
+              <td>: FakeStoreAPI</td>
             </tr>
             <tr>
               <td>Stock</td>
-              <td>: XXXXX</td>
+              <td>: -</td>
             </tr>
           </table>
         </div>
         <div className="flex gap-5 px-2 pt-5 text-2xl">
-          <div className="text-orange-500 text-xl line-through font-bold">
-            Rp. 90.000,-
-          </div>
-          <div className="text-orange-500 text-xl font-bold">Rp. 76.000,-</div>
+          <div className="text-orange-500 text-xl font-bold">$ {priceP}</div>
+          {/* <div className="text-orange-500 text-xl font-bold">Rp. 76.000,-</div> */}
         </div>
         <div className="flex gap-2 items-center pt-5 px-2">
           <button className="px-2 bg-stone-400 shadow-md">-</button>Number

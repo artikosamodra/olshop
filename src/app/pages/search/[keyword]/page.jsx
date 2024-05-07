@@ -21,14 +21,18 @@ const Search = ({ params }) => {
       await new Promise((resolve) => setTimeout(resolve, 500));
       const data = await response.json();
       // console.log("searchData:", data);
-      setSearchData(data);
+      return setSearchData(data);
     };
 
     fetchData();
   }, [keyword]);
 
   if (!decodedKeyword || !searchData) {
-    return <Loading />;
+    return (
+      <div className="flex justify-center items-center h-[100vh]">
+        <Loading />;
+      </div>
+    );
   }
 
   return (
