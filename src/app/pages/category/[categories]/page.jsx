@@ -4,8 +4,7 @@ import ProductCard from "@/app/component/utils/ProductCard";
 const CatPage = () => {
   return (
     <>
-      <Categorty />
-      {/* <ProductCard api={} /> */}
+      <ProductCard />
     </>
   );
 };
