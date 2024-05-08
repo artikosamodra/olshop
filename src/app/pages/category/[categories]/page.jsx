@@ -1,12 +1,11 @@
-import Categorty from "@/app/component/Category/Category";
-import ProductCard from "@/app/component/utils/ProductCard";
+import Recommended from "@/app/component/Recomended/Recommended";
 
-const CatPage = () => {
+const Page = () => {
   return (
     <>
-      <ProductCard />
+      <Recommended />
     </>
   );
 };
 
-export default CatPage;
+export default Page;

@@ -2,6 +2,7 @@
 import Loading from "@/app/loading";
 import { useEffect, useState } from "react";
 import CatergoryCard from "../utils/CategoryCard";
+import ProductCard from "../utils/ProductCard";
 
 const Categorty = () => {
   const [categories, setCategories] = useState([]);
