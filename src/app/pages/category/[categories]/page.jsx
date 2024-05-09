@@ -32,7 +32,7 @@ const Page = ({ params }) => {
   }
   return (
     <>
-      <div className="pt-20 px-20 pb-5">
+      <div className="pt-20 lg:px-20 md:px-5 pb-4">
         <Header nameHeader={`Produk ${decodedKey}`} urlLink="/" nameLink="" />
         <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 flex flex-wrap justify-center items-center gap-3 p-4 bg-gray-200 rounded-sm">
           <ProductCard api={cat} />

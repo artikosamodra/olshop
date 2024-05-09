@@ -11,18 +11,21 @@ const Detail = async ({ params: { id } }) => {
 
   return (
     <>
-      <section className="pt-40 px-20">
+      <section className="pt-20 lg:px-20 md:px-5 pb-4">
         <div className="grid grid-cols-10">
-          <div className="col-span-3" key={id}>
+          <div
+            className="lg:col-span-3 col-span-10 flex justify-center p-4"
+            key={id}
+          >
             <Image
               src={detail.image}
               alt="Product Picture"
               width={300}
               height={300}
-              className="border"
+              className="object-fit"
             />
           </div>
-          <div className="col-span-7">
+          <div className="lg:col-span-7 col-span-10">
             <InfoCard
               nameP={detail.title}
               catP={detail.category}

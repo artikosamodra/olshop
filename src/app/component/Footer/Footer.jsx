@@ -34,8 +34,13 @@ const Footer = () => {
           <Socmed />
         </div>
       </div>
-      <div className="pt-5 lg:pb-5 pb-16 lg:px-20 md:px-5 flex items-center bg-stone-900 text-white font-bold">
-        <h1 className="md:px-0 px-4">Create by Artiko</h1>
+      <div className="pt-5 lg:pb-5 pb-16 lg:px-20 md:px-5 flex text-center items-center bg-stone-900 text-white font-semibold">
+        <div className="container mx-auto">
+          <p>
+            &copy; {new Date().getFullYear()} Taoshop by Artiko. All rights
+            reserved. || Powered by Next.js, React, and Tailwind CSS
+          </p>
+        </div>
       </div>
     </>
   );

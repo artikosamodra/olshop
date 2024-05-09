@@ -30,7 +30,7 @@ const AllProduct = () => {
   return (
     <>
       <div className="pt-20 px-20">
-        <Header nameHeader="All Product" nameLink="" urlLink="/" />
+        <Header nameHeader="Semua Produk" nameLink="" urlLink="/" />
         <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 flex flex-wrap justify-center items-center gap-3 p-4 bg-gray-200 rounded-sm">
           <ProductCard api={products} />
         </div>
