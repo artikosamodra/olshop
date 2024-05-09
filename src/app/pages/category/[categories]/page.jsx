@@ -1,6 +1,7 @@
 "use client";
 import Header from "@/app/component/utils/Header";
 import ProductCard from "@/app/component/utils/ProductCard";
+import Loading from "@/app/loading";
 import { useEffect, useState } from "react";
 
 const Page = ({ params }) => {
@@ -25,7 +26,15 @@ const Page = ({ params }) => {
       setCat(respJson);
     };
     fetchCat();
-  }, []);
+  }, [categories]);
+
+  if (!decodedKey && !cat) {
+    return (
+      <div className="flex justify-center items-center h-[100vh]">
+        <Loading />;
+      </div>
+    );
+  }
   return (
     <>
       <div className="pt-20 px-20 pb-5">
