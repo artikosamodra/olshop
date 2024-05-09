@@ -1,3 +1,7 @@
+//FAKE STORE API TIDAK MEMILIKI ENDPOINT PENCARIAN BERDASARKAN TITLE
+//BISA MENGGUNAKAN AXIOS DAN LAINNYA.
+//NAMUN PROJECT INI TIDAK AKAN MENGGUNAKAN FILTER TAMBAHAN AGAR MURNI FECTH SETTING DARI API
+
 "use client";
 import { useEffect, useState } from "react";
 import Loading from "@/app/loading";
@@ -16,11 +20,13 @@ const Search = ({ params }) => {
 
       // Fetch data
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/products?q=${keyword}`
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/products?title=${keyword}`
       );
       await new Promise((resolve) => setTimeout(resolve, 500));
       const data = await response.json();
-      // console.log("searchData:", data);
+      alert(
+        "FakeStore API tidak memiliki endpoint pencarian berdasarkan title, bisa menggunakan Axios dan lainnya. Namun project ini tidak akan menggunakan filter tambahan agar murni fetch setting dari API."
+      );
       return setSearchData(data);
     };
 

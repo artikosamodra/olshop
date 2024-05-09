@@ -5,11 +5,6 @@ import Loading from "@/app/loading";
 import { useEffect, useState } from "react";
 
 const Page = ({ params }) => {
-  // const response = await fetch(
-  //   `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/category/${category}`
-  // );
-  // const respJson = await response.json();
-
   const [cat, setCat] = useState([]);
   const { categories } = params;
   const [decodedKey, setDecodedKey] = useState(null);

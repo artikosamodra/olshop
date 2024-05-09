@@ -1,3 +1,7 @@
+//FAKE STORE API TIDAK MEMILIKI ENDPOINT PENCARIAN BERDASARKAN TITLE
+//BISA MENGGUNAKAN AXIOS DAN LAINNYA.
+//NAMUN PROJECT INI TIDAK AKAN MENGGUNAKAN FILTER TAMBAHAN AGAR MURNI FECTH SETTING DARI API
+
 "use client";
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
 import { useRouter } from "next/navigation";
