@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const CatergoryCard = ({ api }) => {
-
   return (
     <>
       {api?.map((category, index) => (
-        // <Link href={`/pages/category/${category.id}`} key={category.id}>
+        <Link href={`/pages/category/${category}`} key={index}>
           <motion.div
             whileHover={{ scale: 0.9 }}
             transition={{ duration: 0.5 }}
@@ -15,7 +14,7 @@ const CatergoryCard = ({ api }) => {
           >
             {category}
           </motion.div>
-        // </Link>
+        </Link>
       ))}
     </>
   );

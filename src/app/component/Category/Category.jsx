@@ -2,21 +2,19 @@
 import Loading from "@/app/loading";
 import { useEffect, useState } from "react";
 import CatergoryCard from "../utils/CategoryCard";
-import ProductCard from "../utils/ProductCard";
 
 const Categorty = () => {
   const [categories, setCategories] = useState([]);
 
-  const fetchCat = async () => {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/categories`
-    );
-    const respJson = await response.json();
-    console.log(respJson);
-    setCategories(respJson);
-  };
-
   useEffect(() => {
+    const fetchCat = async () => {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/categories`
+      );
+      const respJson = await response.json();
+      console.log(respJson);
+      setCategories(respJson);
+    };
     fetchCat();
   }, []);
 

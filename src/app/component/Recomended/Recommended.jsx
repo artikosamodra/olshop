@@ -6,15 +6,14 @@ import { useEffect, useState } from "react";
 const Recommended = () => {
   const [products, setProducts] = useState([]);
 
-  const ProductsFetch = async () => {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/products?limit=12`
-    );
-    const respJson = await response.json();
-    setProducts(respJson.sort(() => Math.random() - 0.5));
-  };
-
   useEffect(() => {
+    const ProductsFetch = async () => {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/products?limit=12`
+      );
+      const respJson = await response.json();
+      setProducts(respJson.sort(() => Math.random() - 0.5));
+    };
     ProductsFetch();
   }, []);
 
